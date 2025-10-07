@@ -125,6 +125,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>The <code>echo: false</code> option disables the printing of code (only output is displayed).</p>
+<p>#diseños experimentales</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(agricolae)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>##DCA</p>
+<p>factor-&gt;dosis de fertilizacion nitrogenada (kg/ha) 0 - testigo 50 100 diseño: DCA repeticiones: 5 ue -&gt; 3 dosis x 5 rep= 15</p>
+<p>##DBCA en factorial</p>
+<p>factor 1 -&gt; dosis de fertilizacion factor 2 -&gt;cultivares de papa peruanita canchan diseño: DBCA repeticiones: 4 ue -&gt; 3 dosis x 2 cultivos x 4 rep = 24</p>
+<p>dosis-&gt; c(“0”,“50”,“100”) DCA-&gt; design.crd(trt = dosis, r=5, seed = 123, serie =2) print(DCA$book)</p>
+<p>plots r trt 1 101 1 0 2 102 2 100 3 103 3 50 … dosis-&gt; c(“0”,“50”,“100”) DCA-&gt; design.crd(trt = dosis, r=5, seed = 123, serie =2) print(DCA$book)</p>
 </section>
 
 </main>

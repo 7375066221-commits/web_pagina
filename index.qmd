@@ -24,3 +24,46 @@ You can add options to executable code like this
 ```
 
 The `echo: false` option disables the printing of code (only output is displayed).
+
+#diseños experimentales
+```{r}
+library(agricolae)
+```
+
+##DCA
+
+factor->dosis de fertilizacion nitrogenada (kg/ha)
+0 - testigo
+50
+100
+diseño: DCA
+repeticiones: 5
+ue -> 3 dosis x 5 rep= 15
+
+```{r}
+
+```
+
+##DBCA en factorial
+
+factor 1 -> dosis de fertilizacion 
+factor 2 ->cultivares de papa
+peruanita
+canchan
+diseño: DBCA
+repeticiones: 4
+ue -> 3 dosis x 2 cultivos x 4 rep = 24
+
+```{r}
+dosis-> c("0","50","100")
+DCA-> design.crd(trt = dosis, r=5, seed = 123, serie =2)
+print(DCA$book)
+
+   plots r  trt
+1    101 1   0
+2    102 2 100
+3    103 3  50
+...
+dosis-> c("0","50","100")
+DCA-> design.crd(trt = dosis, r=5, seed = 123, serie =2)
+print(DCA$book)
